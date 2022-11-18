@@ -5,9 +5,9 @@ function App() {
   const [inputR, setInputR] = useState('');
   const [inputT, setInputT] = useState('');
   const [regExp, setRegExp] = useState(/^$/g);
+  const [isInvalidRegex, setIsInvalidRegex] = useState(false);
   const [isMatching, setIsMatching] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
-  const [isInvalidRegex, setIsInvalidRegex] = useState(false);
 
   const timeout = useRef();
 
@@ -15,34 +15,25 @@ function App() {
     clearTimeout(timeout.current);
 
     timeout.current = setTimeout(() => {
-      if (isInvalidRegex || inputR === '' || inputT === '') {
-        setIsShowing(false);
-      } else {
-        if (regExp.test(inputT)) {
-          setIsMatching(true);
+      try {
+        const rx = new RegExp(inputR, 'g');
+
+        setIsInvalidRegex(false);
+        setRegExp(rx);
+        setIsMatching(rx.test(inputT));
+
+        if (inputR === '' || inputT === '') {
+          setIsShowing(false);
         } else {
-          setIsMatching(false);
+          setIsShowing(true);
         }
-        setIsShowing(true);
+      } catch (err) {
+        setIsInvalidRegex(true);
+        setIsMatching(false);
+        setIsShowing(false);
       }
     }, 500);
-  }, [isInvalidRegex, inputR, inputT, regExp]);
-
-  const handleRegExpChange = (e) => {
-    let rex = /^$/g;
-    try {
-      rex = new RegExp(e.target.value, 'g');
-      setIsInvalidRegex(false);
-    } catch (err) {
-      setIsInvalidRegex(true);
-    }
-    setInputR(e.target.value);
-    setRegExp(rex);
-  };
-
-  const handleTestChange = (e) => {
-    setInputT(e.target.value);
-  };
+  }, [inputR, inputT]);
 
   return (
     <div className="App">
@@ -53,13 +44,17 @@ function App() {
           <label htmlFor="regexp">RegExp</label>
           <input
             className={isInvalidRegex ? 'error-text' : ''}
-            onChange={handleRegExpChange}
+            onChange={(e) => setInputR(e.target.value)}
             id="regexp"
             type="text"
           />
 
           <label htmlFor="test-text">Match text</label>
-          <textarea onChange={handleTestChange} id="test-text" rows="5" />
+          <textarea
+            onChange={(e) => setInputT(e.target.value)}
+            id="test-text"
+            rows="5"
+          />
         </div>
       </form>
 
