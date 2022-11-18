@@ -1,6 +1,8 @@
 .App {
+  max-width: 720px;
   min-height: 34rem;
   padding: 2rem;
+  margin: auto;
   text-align: center;
 }
 
