@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/js-regexp-tester/static/css/main.1b1bb163.css",
+    "main.css": "/js-regexp-tester/static/css/main.b1bdf411.css",
     "main.js": "/js-regexp-tester/static/js/main.fa3691b7.js",
     "index.html": "/js-regexp-tester/index.html",
-    "main.1b1bb163.css.map": "/js-regexp-tester/static/css/main.1b1bb163.css.map",
+    "main.b1bdf411.css.map": "/js-regexp-tester/static/css/main.b1bdf411.css.map",
     "main.fa3691b7.js.map": "/js-regexp-tester/static/js/main.fa3691b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b1bb163.css",
+    "static/css/main.b1bdf411.css",
     "static/js/main.fa3691b7.js"
   ]
 }
