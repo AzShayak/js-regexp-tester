@@ -1,38 +1,86 @@
 .App {
+  min-height: 34rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  font-weight: bolder;
+  color: lightslategrey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: 2px solid lightslategrey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form > div label {
+  font-size: 1rem;
+  margin: 0.25em 0;
+  font-weight: bold;
+  text-align: start;
+  color: lightgrey;
+}
+
+form > div :not(label) {
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  text-align: start;
+  color: white;
+  border: 1px solid slategrey;
+}
+
+form > div input {
+  font-family: monospace;
+}
+
+form > div textarea {
+  font-family: sans-serif;
+  resize: vertical;
+}
+
+.error-text {
+  color: crimson;
+}
+
+.result-container h1 {
+  font-size: 1.5rem;
+  padding: 0.5em 0.75em;
+  margin: 0.5em 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.result-container p {
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  margin-top: 0.5em;
+  color: wheat;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-true {
+  background-color: darkgreen;
+}
+
+.result-false {
+  background-color: darkred;
+}
+
+.regexp-view {
+  font-family: monospace;
+  background-color: darkslategrey;
+}
+
+.test-text-view {
+  border: 2px solid darkslategrey;
 }
