@@ -15,8 +15,10 @@ function Home() {
   const timeout = useRef();
 
   useEffect(() => {
-    setInputR(searchParams.get('r'));
-    setInputT(searchParams.get('t'));
+    const r = searchParams.get('r');
+    if (r) setInputR(r);
+    const t = searchParams.get('t');
+    if (t) setInputT(t);
   }, []);
 
   useEffect(() => {
