@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/js-regexp-tester/static/css/main.b1bdf411.css",
-    "main.js": "/js-regexp-tester/static/js/main.abfeb61d.js",
+    "main.css": "/js-regexp-tester/static/css/main.e9efdd86.css",
+    "main.js": "/js-regexp-tester/static/js/main.e7be7417.js",
     "index.html": "/js-regexp-tester/index.html",
-    "main.b1bdf411.css.map": "/js-regexp-tester/static/css/main.b1bdf411.css.map",
-    "main.abfeb61d.js.map": "/js-regexp-tester/static/js/main.abfeb61d.js.map"
+    "main.e9efdd86.css.map": "/js-regexp-tester/static/css/main.e9efdd86.css.map",
+    "main.e7be7417.js.map": "/js-regexp-tester/static/js/main.e7be7417.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1bdf411.css",
-    "static/js/main.abfeb61d.js"
+    "static/css/main.e9efdd86.css",
+    "static/js/main.e7be7417.js"
   ]
 }
