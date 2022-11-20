@@ -44,7 +44,7 @@ function Home() {
       }
 
       setSearchParams({ r: inputR, t: inputT });
-    }, 500);
+    }, 250);
 
     return () => clearTimeout(timeout.current);
   }, [inputR, inputT]);
